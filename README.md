@@ -1,6 +1,6 @@
 `# Aurora-DX Linux Ergo Mining Toolbox (Powered by Rigel)
 
-[![Rigel Miner on Aurora-DX Linux](rigel-aurora-mining.png)]
+![Rigel Miner on Aurora-DX Linux](rigel-aurora-mining.png)
 
 ## Overview
 
