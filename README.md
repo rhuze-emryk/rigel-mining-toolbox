@@ -71,8 +71,8 @@ Follow these simple steps to start mining Ergo on Aurora-DX Linux using the Rige
 1. **Download the Repository:**
    Clone this GitHub repository to your Aurora-DX host system:
 
-```
-bash
+
+  ```bash
    git clone https://github.com/rhuze-emryk/rigel-mining-toolbox.git
    cd rigel-mining-toolbox
 ```
