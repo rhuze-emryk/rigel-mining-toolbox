@@ -71,50 +71,51 @@ Follow these simple steps to start mining Ergo on Aurora-DX Linux using the Rige
 1. **Download the Repository:**
    Clone this GitHub repository to your Aurora-DX host system:
 
-   \`\`\`bash
+```
+bash
    git clone https://github.com/rhuze-emryk/rigel-mining-toolbox.git
    cd rigel-mining-toolbox
-   \`\`\`
+```
 
-2. **Import the Toolbox Image:**
+3. **Import the Toolbox Image:**
    Import the Fedora Toolbox image archive:
 
-   \`\`\`bash
+   ```bash
    podman load -i rigel-toolbox-image.tar.gz
-   \`\`\`
+   ```
 
-3. **Import the Toolbox Filesystem:**
+4. **Import the Toolbox Filesystem:**
    Import the Rigel Mining Toolbox filesystem archive, creating the `rigel-mining-toolbox-image` image:
 
-   \`\`\`bash
+   ```bash
    podman import rigel-toolbox-filesystem.tar.gz rigel-mining-toolbox-image
-   \`\`\`
+   ```
 
-4. **Create the Fedora Toolbox:**
+5. **Create the Fedora Toolbox:**
    Create a new Fedora Toolbox named `rigel-miner-toolbox`:
 
-   \`\`\`bash
+   ```bash
    toolbox create --image rigel-mining-toolbox-image rigel-miner-toolbox
-   \`\`\`
+   ```
 
-5. **Enter the Rigel Mining Toolbox:**
+6. **Enter the Rigel Mining Toolbox:**
 
-   \`\`\`bash
+   ```bash
    toolbox enter rigel-miner-toolbox
-   \`\`\`
+   ```
 
-6. **Navigate to the Rigel Miner Directory:**
+7. **Navigate to the Rigel Miner Directory:**
 
-   \`\`\`bash
+   ```bash
    cd rigel-1.20.1-linux
-   \`\`\`
+   ```
 
-7. **Run Rigel Miner - Start Mining Ergo!**
+8. **Run Rigel Miner - Start Mining Ergo!**
    Launch Rigel miner with the example command. **Remember to replace placeholders with your Ergo wallet address and pool details.**
 
-   \`\`\`bash
+   ```bash
    ./rigel -a autolykos2 -o stratum+ssl://pool.ergo-sig-mining.net:3054 -u YOUR_ERGO_WALLET_ADDRESS.YOUR_WORKER_NAME --log-file rigel.log --temp-limit tc[60-75]tm[90-100] -d 0
-   \`\`\`
+   ```
 
    **Crucially - Replace These Placeholders:**
 
@@ -122,7 +123,7 @@ Follow these simple steps to start mining Ergo on Aurora-DX Linux using the Rige
    * **`YOUR_WORKER_NAME`**: Your chosen worker name (e.g., `aurora-dx-gpu1`).
    * **`stratum+ssl://pool.ergo-sig-mining.net:3054`**:  Your Ergo mining pool URL and port.
 
-8. **Monitor Your Mining:**
+9. **Monitor Your Mining:**
    Rigel miner will display real-time hashrate and mining statistics in the terminal. Monitor your progress and earnings on your mining pool's website dashboard. Check `rigel.log` for detailed logs.
 
 ## Configuration and Advanced Options (Refer to Rigel README)
